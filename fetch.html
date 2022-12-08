@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<section id="emp" style="display: flex;">
+		
+	</section>
+	<!-- <script type="text/javascript">
+		/*const PromiseObj= new Promise((resolve,reject)=>{
+			var time=Math.random();
+			console.log(time)
+			if(time<0.5){
+				return resolve("Data is unavailable")
+			}
+			else{
+				return reject("server crashed")
+			}
+		})
+		console.log(PromiseObj)
+		console.log("hello")*/
+		/*fetch("https://reqres.in/api/users?page=2")
+		.then((res)=>{
+			console.log(res)
+			return res.json()
+		})
+		.then((jsonRes)=>{
+			console.log(jsonRes.data)
+			display(jsonRes.data)
+		})
+		function display(employees){
+			var block=document.getElementById("emp")
+			block.innerHTML=employees[0].first_name
+			for(var i=0;i<employees.length;i++){
+				block.innerHTML+=`
+				<div>
+				<p>${employees[i].first_name}</p>
+				<p>${employees[i].last_name}</p>
+				<img src="${employees[i].avatar}"width="50%"/>
+				<p>${employees[i].email}</p>
+				</div>`
+				/*console.log(employees[i].first_name)*/
+			}
+		}
+	</script> -->
+	
+	 <script type="text/javascript">
+	 	function validate(){
+	 		var name=document.getElementById("name").value,collegename=document.getElementById("collegename").value
+	 		console.log(name,collegename)	
+	 	fetch("https://reqres.in/api/users",{
+	 		method:"POST",
+	 		headers:{
+	 			"Content-Type":"application/json"
+	 		},
+	 		body:JSON.stringify({name:name,college:collegename})
+	 	})
+	 	.then((res)=>{                                                                                          
+	 		
+	 	console.log(res)
+	 	return res.json()
+	 })
+	 	.then((f)=>{
+	 		console.log(f)
+	 	})
+	 }
+	 </script>
+	 <input placeholder="Enter your name" id="name"/>
+	 <input placeholder="Enter your collegename" id="collegename"/>
+	 <button onclick="validate()">Submit</button>
+
+</body>
+</html>

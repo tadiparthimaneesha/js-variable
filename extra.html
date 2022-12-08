@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<section id="emp" style="display: flex"></section>
+	<script type="text/javascript">
+		fetch("https://reqres.in/api/users?page=2")
+		.then((res)=>{
+			console.log(res)
+			return res.json()
+		})
+		.then((jsonRes)=>{
+			console.log(jsonRes.data)
+			display(jsonRes.data)
+		})
+		function display(employees){
+			var block=document.getElementById("emp")
+			/*block.innerHTML=employees[0].first_name*/
+			for(var i=0;i<employees.length;i++){
+				block.innerHTML+=`
+				<div>
+				<p>${employees[i].first_name}</p>
+				<p>${employees[i].last_name}</p>
+				<img src="${employees[i].avatar}"width="50%"/>
+				<p>${employees[i].email}</p>
+				</div>`
+				/*console.log(employees[i].first_name)*/
+			}
+		}
+	</script>
+</body>
+</html>

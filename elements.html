@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function user(){
+			var userName=document.getElementById("username").value
+			/*var textData=document.getElementsByClassName("para")
+			console.log(textData.length)
+			for(var a=0;a<textData.length;a++){
+				console.log(textData[a].innerHTML)
+			}
+			var listOfUl=document.getElementsByTagName("li")
+			for(var r=0;r<listOfUl.length;r++){
+				console.log(listOfUl[r].innerHTML)
+			}*/
+			document.getElementById("Raji").innerHTML=userName
+		}
+	</script>
+</head>
+<body>
+	<!-- <input id="username"/>
+	<p class="para">How are you</p>
+	<p class="para">Im feeling good</p>
+	<h1 class="para">Your eyes looking different</h1>
+	<ul>
+		<li>Apple</li>
+		<li>Mango</li>
+		<li>Strawberry</li>
+		<li>Grapes</li>
+		<li>Banana</li>
+	</ul> -->
+	<input id="username"/>
+	<h1>Name is:<span id="Raji">I am unique</span></h1>
+	<button onclick="user()">Submit</button>
+</body>
+</html>
